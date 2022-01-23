@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos em HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Esse video está hospedado no meu próprio servidor</p>
+
+    <!--Modo de hospedagem de video 1-->
+    <!--<video src="midia/Meuvideo-2.webm" width="300" controls loop></video>-->
+
+    <!--Modo de hospedagem de video 2 / RECOMENDADO-->
+    <video width="300" poster="imagens/foto-m.png" controls autoplay loop>
+        <source src="midia/Meuvideo-1.mp4" type="video/mp4"> <!--Primeiro a ser executado-->
+        <source src="midia/Meuvideo-2.webm" type="video/webm"> <!--Caso o primeiro não funcione, este será executado, e assim por diante seguindo a seguencia-->
+        <p>Infelizmente seu navegador não conseguiu carregar o video.</p>
+    </video>
+
+    <!--Este proximo jeito de hospedagem de video é o mais recomendado de todos. Para melhores beneficios para seu site, hopesdar videos do youtube ou vimeo são as melhores opções-->
+    <h1>Inserindo vídeos do YouTube</h1>
+    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3hng-hmSv2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</body>
+</html>

@@ -7,14 +7,25 @@
   <title>Tabelas</title>
   <style>
     table{
-      width: 500px;
+      width: 450px;
       border-collapse: collapse;
       
     }
     
+    caption{
+      font-size: 1.5em;
+      font-weight: bolder;
+      padding: 10px;
+      background-color: rgb(211, 173, 120);
+    }
+
     thead, tfoot{
       background-color: rgb(80, 66, 47);
       color: white;
+    }
+
+    tbody > tr:nth-child(even){ 
+      background-color: rgb(240, 229, 207);
     }
 
     th, td{
@@ -22,6 +33,9 @@
       padding: 12px;
     }
 
+    tbody tr:hover{
+      background-color: rgb(204, 180, 145);
+    }
     .num{
       text-align: right;
     }
@@ -34,6 +48,7 @@
   <!--
     ANATOMINA PARA TABELAS GRANDES
     TABLE
+      CAPITON
       THEAD
         TR, TD, TH
       TBODY
@@ -43,10 +58,11 @@
   -->
 
   <table>
+    <caption>População das Unidades Federativas</caption>
     <thead>
       <tr>
-        <th>Estado</th>
-        <th>População</th>
+        <th scope="col">Estado</th>
+        <th scope="col" style="width: 80px;">População</th>
       </tr>
     </thead>
     <tbody>
@@ -56,7 +72,7 @@
       </tr>
       <tr>
         <td>Minas Gerais</td>
-        <td class="num">21 411 9232</td>
+        <td class="num">21 411 923</td>
       </tr>
       <tr>
         <td>Rio de Janeiro</td>
@@ -161,7 +177,7 @@
     </tbody>
     <tfoot>
       <tr>
-        <th>Total de Habitantes</th>
+        <th scope="row">Total de Habitantes</th>
         <td class="num"><strong>210 147 125</strong></td>
       </tr>
     </tfoot>
